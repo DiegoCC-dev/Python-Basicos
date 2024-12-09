@@ -1,0 +1,13 @@
+import json
+import yaml
+
+def converter_json_a_yaml(ficheiro_json, ficheiro_yaml):
+    with open(ficheiro_json, 'r') as f:
+        datos = json.load(f)
+    with open(ficheiro_yaml, 'w') as f:
+        yaml.dump(datos, f)
+
+# Proba de exemplo
+ficheiro_json = input("Introduce a ruta do ficheiro JSON: ")
+ficheiro_yaml = input("Introduce a ruta do ficheiro YAML: ")
+converter_json_a_yaml(ficheiro_json, ficheiro_yaml)

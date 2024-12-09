@@ -1,0 +1,13 @@
+import yaml
+
+def comprobar_yaml(ficheiro):
+    try:
+        with open(ficheiro, 'r') as f:
+            yaml.safe_load(f)
+        print("O ficheiro YAML é válido.")
+    except (yaml.YAMLError, FileNotFoundError):
+        print("O ficheiro YAML non é válido.")
+
+# Proba de exemplo
+ficheiro = input("Introduce a ruta do ficheiro YAML: ")
+comprobar_yaml(ficheiro)
